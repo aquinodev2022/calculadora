@@ -1,0 +1,218 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/Program Files (x86)/Falcon/MinGW/bin/gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        C:/Users/Matheus/CLionProjects/calculadora/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/Matheus/CLionProjects/calculadora/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5d2aqe"
+      binary: "C:/Users/Matheus/CLionProjects/calculadora/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5d2aqe"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Matheus/CLionProjects/calculadora/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5d2aqe'
+        
+        Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.4/bin/ninja/win/x64/ninja.exe" -v cmTC_12be1
+        [1/2] C:\\PROGRA~2\\Falcon\\MinGW\\bin\\gcc.exe   -v -o CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c"
+        Using built-in specs.
+        Target: mingw32
+        Configured with: ../../gcc-4.4.1/configure --prefix=/mingw --build=mingw32 --enable-languages=c,ada,c++,fortran,objc,obj-c++ --disable-nls --disable-win32-registry --enable-libgomp --enable-cxx-flags='-fno-function-sections -fno-data-sections' --disable-werror --enable-threads --disable-symvers --enable-version-specific-runtime-libs --enable-fully-dynamic-string --with-pkgversion='TDM-2 mingw32' --enable-sjlj-exceptions --with-bugurl=http://www.tdragon.net/recentgcc/bugs.php
+        Thread model: win32
+        gcc version 4.4.1 (TDM-2 mingw32) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=i386'
+         cc1 -quiet -v -iprefix c:\\progra~2\\falcon\\mingw\\bin\\../lib/gcc/mingw32/4.4.1/ C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=i386 -auxbase-strip CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj -version -o C:\\Users\\Matheus\\AppData\\Local\\Temp\\cclLqrjM.s
+        ignoring nonexistent directory "c:\\progra~2\\falcon\\mingw\\bin\\../lib/gcc/mingw32/4.4.1/../../../../mingw32/include"
+        ignoring nonexistent directory "/mingw/include"
+        ignoring duplicate directory "c:/progra~2/falcon/mingw/lib/gcc/../../include"
+        ignoring duplicate directory "c:/progra~2/falcon/mingw/lib/gcc/../../lib/gcc/mingw32/4.4.1/include"
+        ignoring duplicate directory "c:/progra~2/falcon/mingw/lib/gcc/../../lib/gcc/mingw32/4.4.1/include-fixed"
+        ignoring nonexistent directory "c:/progra~2/falcon/mingw/lib/gcc/../../lib/gcc/mingw32/4.4.1/../../../../mingw32/include"
+        ignoring nonexistent directory "/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         c:\\progra~2\\falcon\\mingw\\bin\\../lib/gcc/mingw32/4.4.1/../../../../include
+         c:\\progra~2\\falcon\\mingw\\bin\\../lib/gcc/mingw32/4.4.1/include
+         c:\\progra~2\\falcon\\mingw\\bin\\../lib/gcc/mingw32/4.4.1/include-fixed
+        End of search list.
+        GNU C (TDM-2 mingw32) version 4.4.1 (mingw32)
+        	compiled by GNU C version 4.4.1, GMP version 4.3.0, MPFR version 2.4.1.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: cf55188e7d2f640bec71afc62bf8d59d
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=i386'
+         as -o CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj C:\\Users\\Matheus\\AppData\\Local\\Temp\\cclLqrjM.s
+        COMPILER_PATH=
+        LIBRARY_PATH=c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/;c:/progra~2/falcon/mingw/bin/../lib/gcc/;c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../\x0d
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=i386'\x0d
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~2\\Falcon\\MinGW\\bin\\gcc.exe  -v CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj -o cmTC_12be1.exe -Wl,--out-implib,libcmTC_12be1.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        Using built-in specs.
+        Target: mingw32
+        Configured with: ../../gcc-4.4.1/configure --prefix=/mingw --build=mingw32 --enable-languages=c,ada,c++,fortran,objc,obj-c++ --disable-nls --disable-win32-registry --enable-libgomp --enable-cxx-flags='-fno-function-sections -fno-data-sections' --disable-werror --enable-threads --disable-symvers --enable-version-specific-runtime-libs --enable-fully-dynamic-string --with-pkgversion='TDM-2 mingw32' --enable-sjlj-exceptions --with-bugurl=http://www.tdragon.net/recentgcc/bugs.php
+        Thread model: win32
+        gcc version 4.4.1 (TDM-2 mingw32) 
+        COMPILER_PATH=
+        LIBRARY_PATH=c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/;c:/progra~2/falcon/mingw/bin/../lib/gcc/;c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_12be1.exe' '-mtune=i386'
+         ld -Bdynamic -o cmTC_12be1.exe c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../crt2.o c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtbegin.o -Lc:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1 -Lc:/progra~2/falcon/mingw/bin/../lib/gcc -Lc:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../.. CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_12be1.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -luser32 -lkernel32 -ladvapi32 -lshell32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtend.o\x0d
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../../include]
+          add: [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/include]
+          add: [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/include-fixed]
+        end of search list found
+        collapse include dir [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../../include] ==> [C:/Program Files (x86)/Falcon/MinGW/include]
+        collapse include dir [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/include] ==> [C:/Program Files (x86)/Falcon/MinGW/lib/gcc/mingw32/4.4.1/include]
+        collapse include dir [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/include-fixed] ==> [C:/Program Files (x86)/Falcon/MinGW/lib/gcc/mingw32/4.4.1/include-fixed]
+        implicit include dirs: [C:/Program Files (x86)/Falcon/MinGW/include;C:/Program Files (x86)/Falcon/MinGW/lib/gcc/mingw32/4.4.1/include;C:/Program Files (x86)/Falcon/MinGW/lib/gcc/mingw32/4.4.1/include-fixed]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: 'C:/Users/Matheus/CLionProjects/calculadora/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5d2aqe']
+        ignore line: []
+        ignore line: [Run Build Command(s): "C:/Program Files/JetBrains/CLion 2024.1.4/bin/ninja/win/x64/ninja.exe" -v cmTC_12be1]
+        ignore line: [[1/2] C:\\PROGRA~2\\Falcon\\MinGW\\bin\\gcc.exe   -v -o CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Using built-in specs.]
+        ignore line: [Target: mingw32]
+        ignore line: [Configured with: ../../gcc-4.4.1/configure --prefix=/mingw --build=mingw32 --enable-languages=c ada c++ fortran objc obj-c++ --disable-nls --disable-win32-registry --enable-libgomp --enable-cxx-flags='-fno-function-sections -fno-data-sections' --disable-werror --enable-threads --disable-symvers --enable-version-specific-runtime-libs --enable-fully-dynamic-string --with-pkgversion='TDM-2 mingw32' --enable-sjlj-exceptions --with-bugurl=http://www.tdragon.net/recentgcc/bugs.php]
+        ignore line: [Thread model: win32]
+        ignore line: [gcc version 4.4.1 (TDM-2 mingw32) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=i386']
+        ignore line: [ cc1 -quiet -v -iprefix c:\\progra~2\\falcon\\mingw\\bin\\../lib/gcc/mingw32/4.4.1/ C:/Program Files/JetBrains/CLion 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=i386 -auxbase-strip CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj -version -o C:\\Users\\Matheus\\AppData\\Local\\Temp\\cclLqrjM.s]
+        ignore line: [ignoring nonexistent directory "c:\\progra~2\\falcon\\mingw\\bin\\../lib/gcc/mingw32/4.4.1/../../../../mingw32/include"]
+        ignore line: [ignoring nonexistent directory "/mingw/include"]
+        ignore line: [ignoring duplicate directory "c:/progra~2/falcon/mingw/lib/gcc/../../include"]
+        ignore line: [ignoring duplicate directory "c:/progra~2/falcon/mingw/lib/gcc/../../lib/gcc/mingw32/4.4.1/include"]
+        ignore line: [ignoring duplicate directory "c:/progra~2/falcon/mingw/lib/gcc/../../lib/gcc/mingw32/4.4.1/include-fixed"]
+        ignore line: [ignoring nonexistent directory "c:/progra~2/falcon/mingw/lib/gcc/../../lib/gcc/mingw32/4.4.1/../../../../mingw32/include"]
+        ignore line: [ignoring nonexistent directory "/mingw/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ c:\\progra~2\\falcon\\mingw\\bin\\../lib/gcc/mingw32/4.4.1/../../../../include]
+        ignore line: [ c:\\progra~2\\falcon\\mingw\\bin\\../lib/gcc/mingw32/4.4.1/include]
+        ignore line: [ c:\\progra~2\\falcon\\mingw\\bin\\../lib/gcc/mingw32/4.4.1/include-fixed]
+        ignore line: [End of search list.]
+        ignore line: [GNU C (TDM-2 mingw32) version 4.4.1 (mingw32)]
+        ignore line: [	compiled by GNU C version 4.4.1  GMP version 4.3.0  MPFR version 2.4.1.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: cf55188e7d2f640bec71afc62bf8d59d]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=i386']
+        ignore line: [ as -o CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj C:\\Users\\Matheus\\AppData\\Local\\Temp\\cclLqrjM.s]
+        ignore line: [COMPILER_PATH=]
+        ignore line: [LIBRARY_PATH=c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/]
+        ignore line: [c:/progra~2/falcon/mingw/bin/../lib/gcc/]
+        ignore line: [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../\x0d]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=i386'\x0d]
+        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\PROGRA~2\\Falcon\\MinGW\\bin\\gcc.exe  -v CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj -o cmTC_12be1.exe -Wl --out-implib libcmTC_12be1.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [Using built-in specs.]
+        ignore line: [Target: mingw32]
+        ignore line: [Configured with: ../../gcc-4.4.1/configure --prefix=/mingw --build=mingw32 --enable-languages=c ada c++ fortran objc obj-c++ --disable-nls --disable-win32-registry --enable-libgomp --enable-cxx-flags='-fno-function-sections -fno-data-sections' --disable-werror --enable-threads --disable-symvers --enable-version-specific-runtime-libs --enable-fully-dynamic-string --with-pkgversion='TDM-2 mingw32' --enable-sjlj-exceptions --with-bugurl=http://www.tdragon.net/recentgcc/bugs.php]
+        ignore line: [Thread model: win32]
+        ignore line: [gcc version 4.4.1 (TDM-2 mingw32) ]
+        ignore line: [COMPILER_PATH=]
+        ignore line: [LIBRARY_PATH=c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/]
+        ignore line: [c:/progra~2/falcon/mingw/bin/../lib/gcc/]
+        ignore line: [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_12be1.exe' '-mtune=i386']
+        link line: [ ld -Bdynamic -o cmTC_12be1.exe c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../crt2.o c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtbegin.o -Lc:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1 -Lc:/progra~2/falcon/mingw/bin/../lib/gcc -Lc:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../.. CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_12be1.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -luser32 -lkernel32 -ladvapi32 -lshell32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtend.o\x0d]
+          arg [ld] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-o] ==> ignore
+          arg [cmTC_12be1.exe] ==> ignore
+          arg [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../crt2.o] ==> obj [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../crt2.o]
+          arg [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtbegin.o] ==> obj [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtbegin.o]
+          arg [-Lc:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1] ==> dir [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1]
+          arg [-Lc:/progra~2/falcon/mingw/bin/../lib/gcc] ==> dir [c:/progra~2/falcon/mingw/bin/../lib/gcc]
+          arg [-Lc:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../..] ==> dir [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../..]
+          arg [CMakeFiles/cmTC_12be1.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [--out-implib] ==> ignore
+          arg [libcmTC_12be1.dll.a] ==> ignore
+          arg [--major-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [--minor-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-luser32] ==> lib [user32]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-ladvapi32] ==> lib [advapi32]
+          arg [-lshell32] ==> lib [shell32]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtend.o] ==> obj [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtend.o]
+        remove lib [msvcrt]
+        remove lib [msvcrt]
+        collapse obj [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../crt2.o] ==> [C:/Program Files (x86)/Falcon/MinGW/lib/crt2.o]
+        collapse obj [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtbegin.o] ==> [C:/Program Files (x86)/Falcon/MinGW/lib/gcc/mingw32/4.4.1/crtbegin.o]
+        collapse obj [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtend.o] ==> [C:/Program Files (x86)/Falcon/MinGW/lib/gcc/mingw32/4.4.1/crtend.o]
+        collapse library dir [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1] ==> [C:/Program Files (x86)/Falcon/MinGW/lib/gcc/mingw32/4.4.1]
+        collapse library dir [c:/progra~2/falcon/mingw/bin/../lib/gcc] ==> [C:/Program Files (x86)/Falcon/MinGW/lib/gcc]
+        collapse library dir [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../..] ==> [C:/Program Files (x86)/Falcon/MinGW/lib]
+        implicit libs: [mingw32;gcc;moldname;mingwex;user32;kernel32;advapi32;shell32;mingw32;gcc;moldname;mingwex]
+        implicit objs: [C:/Program Files (x86)/Falcon/MinGW/lib/crt2.o;C:/Program Files (x86)/Falcon/MinGW/lib/gcc/mingw32/4.4.1/crtbegin.o;C:/Program Files (x86)/Falcon/MinGW/lib/gcc/mingw32/4.4.1/crtend.o]
+        implicit dirs: [C:/Program Files (x86)/Falcon/MinGW/lib/gcc/mingw32/4.4.1;C:/Program Files (x86)/Falcon/MinGW/lib/gcc;C:/Program Files (x86)/Falcon/MinGW/lib]
+        implicit fwks: []
+      
+      
+...
