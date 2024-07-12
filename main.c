@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 
-void clearScreen() {
+void limparTerminal() {
 #ifdef _WIN32
     system("cls");
 #else
@@ -11,84 +11,99 @@ void clearScreen() {
 }
 
 int main() {
-    char operador;
-    int quantidade, i;
-    float num, resultado = 0;
-    char continuar;
-    char nomePessoa[50]; // Ajuste o tamanho conforme necessário
+    char operacaoMatematica;
+    int quantidadeNumeros, indice;
+    float numeroCalcular, resultadoCalculo = 0;
+    char continuarOperacao;
+    char nomePessoa[50];
     setlocale(LC_ALL, "Portuguese_Brazil");
 
+    printf("Digite seu nome: ");
+    // Captura o nome digitado pelo usuário
+    fgets(nomePessoa, sizeof(nomePessoa), stdin);
+    // Remove a quebra de linha do final
+    nomePessoa[strcspn(nomePessoa, "\n")] = 0;
+    limparTerminal();
+
+    // Loop principal
     do {
-        clearScreen(); // Limpa a tela
-
-        printf("Digite seu nome: ");
-        fgets(nomePessoa, sizeof(nomePessoa), stdin);
-        // Remover a quebra de linha do final, se houver
-        nomePessoa[strcspn(nomePessoa, "\n")] = 0;
-        clearScreen();
-
-        // Solicita ao usuário que entre com a quantidade de números
+        limparTerminal(); // Limpa o terminal quando o usuário deseja continuar com outra operação
         printf("--------------- Calculadora ---------------\n");
-        printf("\nOlá, seja bem vindo %s!\n", nomePessoa);
+        printf("\nOlá, %s. Seja bem vindo!\n", nomePessoa);
+        printf("\nDigite a quantidade de números que você irá calcular: ");
 
-        printf("\nDigite a quantidade de numeros que voce ira calcular: ");
-        while (scanf("%d", &quantidade) != 1 || quantidade <= 0) {
-            printf("Entrada invalida. Digite um numero inteiro positivo: ");
-            while (getchar() != '\n'); // Limpa o buffer
+        // verifica se é um número e se é número positivo
+        while (scanf("%d", &quantidadeNumeros) != 1 || quantidadeNumeros <= 0) {
+            printf("\nEntrada inválida. Digite um número inteiro positivo: ");
+            while (getchar() != '\n'); // limpa o buffer de entrada para descartar caractere inválido
         }
 
-        // Solicita ao usuário que entre com a operação desejada
-        printf("Digite uma operacao (+, -, *, /): ");
-        scanf(" %c", &operador); // Nota o espaço antes de %c para limpar o buffer
+        printf("\nDigite uma operação (+, -, *, /): ");
+        scanf(" %c", &operacaoMatematica);
 
-        // Solicita ao usuário que entre com os números, um por um
-        for (i = 0; i < quantidade; i++) {
-            printf("Digite o numero %d: ", i + 1);
-            while (scanf("%f", &num) != 1) {
-                printf("Entrada invalida. Digite um numero: ");
-                while (getchar() != '\n'); // Limpa o buffer
+        // Verificação se a operação é válida
+        while (operacaoMatematica != '+' && operacaoMatematica != '-' && operacaoMatematica != '*' && operacaoMatematica != '/') {
+            printf("\nOperação inválida! Digite uma operação válida (+, -, *, /): ");
+            while (getchar() != '\n'); // limpa o buffer de entrada para descartar caractere inválido
+            scanf(" %c", &operacaoMatematica);
+        }
+
+        printf("\n-------------------------------------------\n");
+
+        // Solicitação dos números ao usuário
+        for (indice = 0; indice < quantidadeNumeros; indice++) {
+            printf("Digite o número %d: ", indice + 1);
+            while (scanf("%f", &numeroCalcular) != 1) {
+                printf("Entrada inválida. Digite um número: ");
+                while (getchar() != '\n'); // limpa o buffer de entrada para descartar caractere inválido
             }
 
-            if (i == 0) {
-                resultado = num;
+            // Operações matemática de acordo com a escolha do usuário
+            if (indice == 0) {
+                resultadoCalculo = numeroCalcular; // Resultado é o primeiro número digitado
             } else {
-                switch (operador) {
+                switch (operacaoMatematica) {
                     case '+':
-                        resultado += num;
+                        resultadoCalculo += numeroCalcular;
                         break;
                     case '-':
-                        resultado -= num;
+                        resultadoCalculo -= numeroCalcular;
                         break;
                     case '*':
-                        resultado *= num;
+                        resultadoCalculo *= numeroCalcular;
                         break;
                     case '/':
-                        if (num != 0) {
-                            resultado /= num;
+                        if (numeroCalcular != 0) { // Só realiza a divisão se o divisor for diferente de zero
+                            resultadoCalculo /= numeroCalcular;
                         } else {
-                            printf("Erro! Divisao por zero nao permitida.\n");
-                            i--; // Pede o número novamente
+                            printf("Erro! Divisão por zero não permitida.\n");
+                            indice--; // Loop solicita novamente um número válido
                         }
                         break;
-                    default:
-                        printf("Operador invalido.\n");
-                        i = quantidade; // Sai do loop
                 }
             }
         }
 
-        // Exibe o resultado final
-        if (operador == '+' || operador == '-' || operador == '*' || operador == '/') {
-            printf("Resultado: %.2f\n", resultado);
+        // Exibe o resultado da operação
+        if (operacaoMatematica == '+' || operacaoMatematica == '-' || operacaoMatematica == '*' || operacaoMatematica == '/') {
+            printf("\nResultado: %.2f\n", resultadoCalculo);
         }
 
-        // Pergunta ao usuário se deseja continuar
-        printf("Deseja realizar outra operacao? (s/n): ");
-        scanf(" %c", &continuar); // Nota o espaço antes de %c para limpar o buffer
+        do {
+            printf("\nDeseja realizar outra operação? (s/n): ");
+            scanf(" %c", &continuarOperacao);
 
-    } while (continuar == 's' || continuar == 'S');
+            while (getchar() != '\n'); // limpa o buffer de entrada para descartar caractere inválido
 
-    printf("Encerrando a calculadora.\n");
+            if (continuarOperacao != 's' && continuarOperacao != 'S' && continuarOperacao != 'n' && continuarOperacao != 'N') {
+                printf("\nResposta inválida! Digite 's' para Sim ou 'n' para Não.\n");
+            }
+            // Caso o usuário digite errado, solicita novamente se ele deseja continuar a operação
+        } while (continuarOperacao != 's' && continuarOperacao != 'S' && continuarOperacao != 'n' && continuarOperacao != 'N');
+
+    } while (continuarOperacao == 's' || continuarOperacao == 'S'); // Loop principal reiniciado
+
+    printf("\nEncerrando a calculadora...\n"); // Caso não queira continuar, fim do programa
 
     return 0;
 }
